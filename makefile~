@@ -1,0 +1,13 @@
+CC = gcc -Wall -O3 -ansi -pedantic
+
+all: pile
+
+pile: pile.o 
+	$(CC) -o pile pile.o
+
+pile.o: pile.c pile.h
+	$(CC) -o pile.o -c pile.c
+
+clean:
+	rm -rf *.o
+			
